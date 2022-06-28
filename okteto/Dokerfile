@@ -1,0 +1,14 @@
+FROM node
+
+WORKDIR /usr/src/app
+
+ADD packages.json .
+RUN npm install
+
+COPY index.html .
+
+EXPOSE 3000
+
+CMD npm start
+
+

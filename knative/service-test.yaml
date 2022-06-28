@@ -1,0 +1,19 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: example
+  namespace: demo
+spec:
+  template:
+    metadata:
+      name: example-v1
+    spec:
+      containers:
+        - image: nginx
+          ports:
+          - containerPort: 80
+          imagePullPolicy: Always
+  traffic:
+  - tag: current
+    latestRevision: true
+    percent: 100

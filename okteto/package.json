@@ -1,0 +1,9 @@
+{
+  "name": "gitpod okteto test",
+  "scripts": {
+	  "start": "npx vite"
+  },
+  "dependencies": {
+    "vite": "^2.9.12"
+  }
+}
